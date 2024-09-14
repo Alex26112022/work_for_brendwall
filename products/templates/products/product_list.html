@@ -1,0 +1,31 @@
+{% extends 'products/base.html' %}
+
+{% block title %}Список продуктов{% endblock %}
+
+{% block content %}
+  <table class="table table-bordered border-primary border border-4 table-hover">
+    <thead>
+      <th scope="col" class="text-warning">Название</th>
+      <th scope="col" class="text-warning">Описание</th>
+      <th scope="col" class="text-warning">Цена</th>
+    </thead>
+    {% for product in object_list %}
+    <tbody class="table-group-divider">
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }} руб.</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+<div class="col-12 m-3
+   d-flex align-items-center justify-content-center">
+  <a href="{% url 'products:product_create' %}"
+     class="btn btn-block btn-outline-success btn-lg"
+     role="button">Добавить продукт
+  </a>
+</div>
+
+{% endblock %}
