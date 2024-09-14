@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
     'rest_framework',
     'drf_yasg',
+    'users',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -90,15 +91,19 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        # noqa
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        # noqa
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        # noqa
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        # noqa
     },
 ]
 
