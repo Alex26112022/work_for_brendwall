@@ -10,7 +10,8 @@ class Product(models.Model):
                                    null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2,
                                 verbose_name='Цена',
-                                validators=[validate_min_value])
+                                validators=[validate_min_value], blank=True,
+                                null=True)
 
     def __str__(self):
         return self.name
